@@ -122,6 +122,8 @@ header .social-media svg {
   cursor: pointer;
 }
 
+/* Projects section style */
+
 .projects{
   max-width: 60%;
   margin: 6rem auto;
@@ -170,8 +172,62 @@ header .social-media svg {
   color: white;
 }
 
+/* About Me section style */
+
+.about{
+  max-width: 60%;
+  margin: 6rem auto;
+}
 
 
+.about > p{
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.about .about-content{
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow:
+  7px 5.7px 44.6px rgba(0, 0, 0, 0.04),
+  15.9px 12.9px 81.8px rgba(0, 0, 0, 0.029),
+  28.3px 23px 116px rgba(0, 0, 0, 0.026),
+  47.3px 38.4px 154.5px rgba(0, 0, 0, 0.023),
+  80.8px 65.6px 215.8px rgba(0, 0, 0, 0.018),
+  170px 138px 398px rgba(0, 0, 0, 0.011);
+}
+
+.about .about-content .myself{
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  text-align: justify;
+}
+
+.about .about-content > div{
+  margin: 1.2rem auto;
+  width: fit-content;
+}
+
+.about .about-content > div img{
+  border-radius: 50%;
+}
+
+.about .about-content .skills{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50%;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.about .about-content .skills div p{
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
 
 
 
