@@ -197,7 +197,7 @@ header .social-media svg {
   margin: 4rem auto;
 }
 
-.projects .projects-showcase img{
+.projects .projects-showcase img {
   width: 700px;
   height: 300px;
 }
@@ -431,7 +431,7 @@ header .social-media svg {
     margin: 2rem auto 4rem;
   }
 
-  .projects .projects-showcase img{
+  .projects .projects-showcase img {
     width: 300px;
     height: 150px;
   }
@@ -443,12 +443,12 @@ header .social-media svg {
     margin-left: 3rem;
   }
 
-  .projects-showcase .two{
+  .projects-showcase .two {
     flex-direction: column;
     align-items: start;
   }
 
-  .projects-showcase .four{
+  .projects-showcase .four {
     flex-direction: column;
     align-items: start;
   }
@@ -476,5 +476,25 @@ header .social-media svg {
   .projects-showcase .project .project-details button:hover {
     background-color: rgba(0, 119, 181);
     color: white;
+  }
+
+  /* About Me section style */
+
+  .about {
+    max-width: 95%;
+  }
+
+  .about>p {
+    font-size: 3rem;
+    margin-left: 3rem;
+  }
+
+  .about .about-content {
+    padding: 1.5rem 1rem;
+    margin-left: 3rem;
+  }
+
+  .about .about-content .skills {
+    max-width: 100%;
   }
 }
