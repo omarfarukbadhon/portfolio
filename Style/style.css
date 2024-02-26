@@ -50,6 +50,10 @@ nav button{
   margin-bottom: 1.5rem;
 }
 
+nav .CV{
+  display: none;
+}
+
 .header-content{
   display: flex;
   width: 60%;
@@ -281,6 +285,8 @@ header .social-media svg {
 /* Responsive for mobile view */
 
 @media screen and (max-width: 450px) {
+
+  /* header */
   
   header nav{
     justify-content: center;
@@ -294,7 +300,17 @@ header .social-media svg {
   }
   
   nav button{
-    margin-top: 0;
+    margin-top: -2rem;
+    margin-left: 18rem;
+    border-radius: 4rem;
+  }
+
+  nav .resume{
+    display: none;
+  }
+
+  nav .CV{
+    display: block;
   }
   
   .header-content{
@@ -340,6 +356,52 @@ header .social-media svg {
     top: 20%;
     left: 0.5%;
   }
+
+  /* Projects section style */
+
+.projects{
+  max-width: 95%;
+  margin: 3rem auto;
+}
+
+
+.projects > p{
+  font-size: 3rem;
+}
+
+.projects .projects-showcase{
+  margin: 2rem auto 4rem;
+}
+
+.projects-showcase .project{
+  flex-direction: column-reverse;
+  margin-bottom: 3rem;
+}
+
+.projects-showcase .project .project-details h1{
+  margin-bottom: 0.8rem;
+}
+
+.projects-showcase .project p{
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.projects-showcase .project .project-details button{
+  padding: 1rem 1.5rem;
+  font-size: 1.3rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+}
+
+.projects-showcase .project .project-details button:hover{
+  background-color: rgba(0, 119, 181);
+  color: white;
+}
 }
 
 
