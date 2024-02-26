@@ -497,4 +497,25 @@ header .social-media svg {
   .about .about-content .skills {
     max-width: 100%;
   }
+
+  /* Contact us section style */
+
+  .contact-me {
+    max-width: 95%;
+    margin: 6rem auto 0;
+  }
+
+  .contact-me>p {
+    font-size: 3rem;
+  }
+
+  .contact-me .mail {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-me .mail>p {
+    font-size: 1.8rem;
+    margin-right: 0rem;
+  }
 }
