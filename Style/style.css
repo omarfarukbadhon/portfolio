@@ -347,14 +347,15 @@ header .social-media svg {
   /* header */
 
   header nav {
-    justify-content: center;
+    justify-content: left;
+    margin-left: 1.5rem;
     gap: 2rem;
     flex-wrap: wrap;
     width: 100%;
   }
 
-  header nav>img {
-    margin-top: 0.6rem;
+  header nav .logo {
+    display: none;
   }
 
   nav button {
