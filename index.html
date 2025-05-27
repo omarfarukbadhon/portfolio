@@ -16,9 +16,18 @@
     <nav>
       <img src="images/favicon.png" alt="" width="65px" height="65px" class="logo">
       <ul>
-        <li><a href="#project">Project</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li class="dropdown">
+          <a href="#academic">Academic</a>
+          <div class="dropdown-content">
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#extracurricular">Extra Curricular</a>
+          </div>
+        </li>
+        <li><a href="#experience">Professional Experience</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
       </ul>
       <div class="CV">
         <a href="https://drive.google.com/file/d/1mM0HYBHaZZJrmt3X4wtI9RyJCEZMZcBX/view?usp=sharing" target="_blank"
@@ -68,25 +77,25 @@
       <div>
         <img src="images/about.jpg" alt="" width="250" height="250">
       </div>
-      <p class="myself">Hey, I’m <b style="font-weight: 600; font-size: 1.3rem;">Omar Faruk Badhon</b>, an embedded
+      <p class="myself">Hey, I'm <b style="font-weight: 600; font-size: 1.3rem;">Omar Faruk Badhon</b>, an embedded
         hardware enthusiast who speaks fluent datasheets, thinks in circuits, and
         occasionally dreams in Altium layers. <br><br>
 
         I graduated with a B.Sc. in Energy Science and Engineering from KUET, where I discovered my obsession with power
-        electronics, embedded systems, and everything in between. Since then, I’ve been designing and building
+        electronics, embedded systems, and everything in between. Since then, I've been designing and building
         real-world hardware: remote monitoring systems, AC energy meters, smart controllers. <br> Currently, I work as
         an
-        Embedded Hardware Engineer at telecom industry, where I’ve led the design and
+        Embedded Hardware Engineer at telecom industry, where I've led the design and
         development of multi-layer industrial PCBs for telecom, energy, and automation systems. From schematic capture
         to BOM optimization and lab testing, I handle full-cycle hardware design — often under tight timelines and high
-        expectations. I’ve also worked closely with international vendors to reduce cost while maintaining performance.
+        expectations. I've also worked closely with international vendors to reduce cost while maintaining performance.
         <br><br>
 
-        Outside of my 9-to-5, I lead a freelancing team on Fiverr, turning coffee into hardware for global clients. I’ve
+        Outside of my 9-to-5, I lead a freelancing team on Fiverr, turning coffee into hardware for global clients. I've
         worked with protocols like RS485, Modbus, and UART, and designed power supplies, protection circuits, and
         real-time control systems. <br><br>
 
-        Let’s build something that matters and make it look good on an oscilloscope. I have become confident using the
+        Let's build something that matters and make it look good on an oscilloscope. I have become confident using the
         following technologies:
       </p>
       <div class="skills">
@@ -141,6 +150,48 @@
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
             alt="JavaScript">
           <p>JavaScript</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience">
+    <p>Experience</p>
+    <div class="experience-tabs">
+      <button class="experience-tab active" onclick="showExperience('work')">Work</button>
+      <button class="experience-tab" onclick="showExperience('startup')">Startup</button>
+    </div>
+    <div class="timeline" id="work-experience">
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>Embedded Hardware Engineer</h3>
+          <h4>SARBS Communications Ltd.</h4>
+          <p>11 MAR 2024 – CURRENT</p>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>Embedded System Engineer (Part Time)</h3>
+          <h4>SARBS Communications Ltd.</h4>
+          <p>1 JAN 2023 – 31 MAY 2023</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>Junior Embedded System Engineer (Intern)</h3>
+          <h4>AmarSource Ltd.</h4>
+          <p>1 MAR 2022 – 30 SEP 2022</p>
+        </div>
+      </div>
+    </div>
+    <div class="timeline" id="startup-experience" style="display: none;">
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>Chief Technology Officer (CTO)</h3>
+          <h4>bigganpur.com</h4>
+          <p>March 2022 - January 2024</p>
+          <p>Co-founded and led technical development during university years</p>
         </div>
       </div>
     </div>
@@ -237,6 +288,20 @@
       d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
     </path>
   </svg>
+
+  <script>
+    function showExperience(type) {
+      // Update active tab
+      document.querySelectorAll('.experience-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      event.target.classList.add('active');
+
+      // Show selected experience type
+      document.getElementById('work-experience').style.display = type === 'work' ? 'block' : 'none';
+      document.getElementById('startup-experience').style.display = type === 'startup' ? 'block' : 'none';
+    }
+  </script>
 </body>
 
 </html>
