@@ -198,7 +198,7 @@ header .social-media svg {
 }
 
 .projects .projects-showcase img {
-  width: 700px;
+  width: auto;
   height: 300px;
 }
 
@@ -280,7 +280,7 @@ header .social-media svg {
 .about .about-content .skills {
   display: flex;
   flex-wrap: wrap;
-  max-width: 50%;
+  max-width: 53%;
   gap: 2rem;
   align-items: center;
   justify-content: center;
