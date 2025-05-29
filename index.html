@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Omar Faruk</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="Style/style.css">
   <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -103,69 +104,112 @@
         following technologies:
       </p>
       <div class="skills">
-        <div class="skills-slider">
-          <button class="slider-btn prev" onclick="moveSlide('skills', -1)"><i class="fas fa-chevron-left"></i></button>
-          <div class="slider-container">
-            <div class="skill-group">
+        <div class="swiper skills-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
               <div>
-                <img width="80" height="80" src="images/altium-designer.png" alt="Altium Designer">
+                <img class="skill-icon" width="80" height="80" src="images/altium-designer.png" alt="Altium Designer">
                 <p>Altium Designer</p>
               </div>
+            </div>
+            <div class="swiper-slide">
               <div>
-                <img width="80" height="80" src="images/easyEDA.png" alt="EasyEDA">
+                <img class="skill-icon" width="80" height="80" src="images/easyEDA.png" alt="EasyEDA">
                 <p>EasyEDA</p>
               </div>
+            </div>
+            <div class="swiper-slide">
               <div>
-                <img width="80" height="80" src="images/fritzing.png" alt="Fritzing">
+                <img class="skill-icon" width="80" height="80" src="images/fritzing.png" alt="Fritzing">
                 <p>Fritzing</p>
               </div>
+            </div>
+            <div class="swiper-slide">
               <div>
-                <img width="80" height="80" src="images/Solidworks.webp" alt="Solidworks">
+                <img class="skill-icon" width="80" height="80" src="images/Solidworks.webp" alt="Solidworks">
                 <p>Solidworks</p>
               </div>
+            </div>
+            <div class="swiper-slide">
               <div>
-                <img width="80" height="80"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="arduino">
+                <img class="skill-icon" width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="arduino">
                 <p>Arduino IDE</p>
               </div>
             </div>
-            <div class="skill-group">
+            <div class="swiper-slide">
               <div>
-                <img width="80" height="80"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="Vs code">
+                <img class="skill-icon" width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="Vs code">
                 <p>VS code</p>
               </div>
+            </div>
+            <div class="swiper-slide">
               <div>
-                <img width="80" height="80"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                <img class="skill-icon" width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
                 <p>Python</p>
               </div>
+            </div>
+            <div class="swiper-slide">
               <div>
-                <img width="80" height="80"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                <img class="skill-icon" width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
                 <p>C++</p>
               </div>
+            </div>
+            <div class="swiper-slide">
               <div>
-                <img width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                  alt="HTML">
+                <img class="skill-icon" width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
                 <p>HTML</p>
               </div>
+            </div>
+            <div class="swiper-slide">
               <div>
-                <img width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                  alt="CSS">
+                <img class="skill-icon" width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
                 <p>CSS</p>
               </div>
             </div>
-            <div class="skill-group">
+            <div class="swiper-slide">
               <div>
-                <img width="80" height="80"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                  alt="JavaScript">
+                <img class="skill-icon" width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
                 <p>JavaScript</p>
               </div>
             </div>
           </div>
-          <button class="slider-btn next" onclick="moveSlide('skills', 1)"><i class="fas fa-chevron-right"></i></button>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Section -->
+  <section id="academic" class="academic">
+    <p>Academic Background</p>
+    <div class="academic-container">
+      <div class="academic-card">
+        <div class="timeline-content">
+          <h3>B.Sc. in Energy Science and Engineering</h3>
+          <h4>Khulna University of Engineering & Technology</h4>
+          <p>January 2019 - March 2024</p>
+          <a href="varsity.html" class="details-btn">View Details</a>
+        </div>
+      </div>
+      <div class="academic-card">
+        <div class="timeline-content">
+          <h3>Higher Secondary Certificate (HSC)</h3>
+          <h4>B A F Shaheen College, Dhaka</h4>
+          <p>July 2016 - April 2018</p>
+          <p>Science Group with focus on Physics, Chemistry, and Mathematics</p>
+          <p>GPA 4.67 (Out of 5)</p>
+        </div>
+      </div>
+      <div class="academic-card">
+        <div class="timeline-content">
+          <h3>Secondary School Certificate (SSC)</h3>
+          <h4>Meherpur Govt High School, Meherpur</h4>
+          <p>January 2014 - February 2016</p>
+          <p>Science Group with excellent academic performance</p>
+          <p>GPA 5.00 (Out of 5)</p>
+          <p>National Board Education Scholarship</p>
         </div>
       </div>
     </div>
@@ -234,14 +278,18 @@
             rel="noopener noreferrer"><button>GitHub</button></a>
         </div>
         <div class="project-image">
-          <div class="project-slider">
-            <button class="slider-btn prev" onclick="moveSlide('project1', -1)">❮</button>
-            <div class="slider-container">
-              <img src="images/Solar MPPT.png" alt="Solar-MPPT-Controller">
-              <img src="images/sensors.jpeg" alt="Project Image 2">
-              <img src="images/data.png" alt="Project Image 3">
+          <div class="swiper project-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/Solar MPPT.png" alt="Solar-MPPT-Controller">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/Solar MPPT 1.png" alt="Project Image 2">
+              </div>
             </div>
-            <button class="slider-btn next" onclick="moveSlide('project1', 1)">❯</button>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
       </div>
@@ -296,36 +344,6 @@
     </div>
   </section>
 
-  <!-- Academic Section -->
-  <section id="academic" class="academic">
-    <p>Academic Background</p>
-    <div class="timeline" id="academic-timeline">
-      <div class="timeline-item right">
-        <div class="timeline-content">
-          <h3>B.Sc. in Energy Science and Engineering</h3>
-          <h4>Khulna University of Engineering & Technology</h4>
-          <p>January 2019 - March 2024</p>
-          <p>Major coursework in Power Electronics, Control Systems, and Renewable Energy</p>
-        </div>
-      </div>
-      <div class="timeline-item left">
-        <div class="timeline-content">
-          <h3>Higher Secondary Certificate (HSC)</h3>
-          <h4>B A F Shaheen College, Dhaka</h4>
-          <p>July 2016 - April 2018</p>
-          <p>Science Group with focus on Physics, Chemistry, and Mathematics</p>
-        </div>
-      </div>
-      <div class="timeline-item right">
-        <div class="timeline-content">
-          <h3>Secondary School Certificate (SSC)</h3>
-          <h4>Meherpur Govt High School, Meherpur</h4>
-          <p>January 2014 - February 2016</p>
-          <p>Science Group with excellent academic performance</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Contact section -->
   <section id="contact" class="contact-me">
@@ -344,7 +362,58 @@
     </path>
   </svg>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
+    // Initialize Project Swiper
+    const projectSwiper = new Swiper('.project-swiper', {
+      loop: true,
+      grabCursor: true,
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    // Initialize Skills Swiper
+    const skillsSwiper = new Swiper('.skills-swiper', {
+      loop: true,
+      grabCursor: true,
+      spaceBetween: 30,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        }
+      }
+    });
+
     function showExperience(type) {
       // Update active tab
       document.querySelectorAll('.experience-tab').forEach(tab => {
@@ -371,7 +440,7 @@
 
     // Image slider functionality
     const sliders = {
-      'skills': { current: 0, total: document.querySelectorAll('.skills .skill-group').length },
+      'skills': { current: 0, total: Math.ceil(document.querySelectorAll('.skills .skill-group div').length / 4) },
       'project1': { current: 0, total: document.querySelectorAll('.project.one .slider-container img').length }
     };
 
@@ -379,11 +448,16 @@
       const slider = sliders[sliderId];
       slider.current = (slider.current + direction + slider.total) % slider.total;
       
-      const container = document.querySelector(`#${sliderId} .slider-container`);
-      const items = container.children;
-      const itemWidth = items[0].offsetWidth;
-      
-      container.style.transform = `translateX(-${slider.current * itemWidth}px)`;
+      if (sliderId === 'project1') {
+        const container = document.querySelector('.project.one .slider-container');
+        const items = container.querySelectorAll('img');
+        const itemWidth = items[0].offsetWidth;
+        container.style.transform = `translateX(-${slider.current * itemWidth}px)`;
+      } else if (sliderId === 'skills') {
+        const container = document.querySelector('.skills .slider-container');
+        const groupWidth = container.offsetWidth;
+        container.style.transform = `translateX(-${slider.current * groupWidth}px)`;
+      }
     }
 
     // Close dropdowns when clicking outside

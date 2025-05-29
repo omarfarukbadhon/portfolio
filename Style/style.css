@@ -388,14 +388,16 @@ header .social-media svg {
 }
 
 .projects .projects-showcase img {
-  width: auto;
+  width: 100%;
   height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .projects-showcase .project {
   position: relative;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8rem;
@@ -442,10 +444,29 @@ header .social-media svg {
 
 .skill-group {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-wrap: nowrap;
+  gap: 2rem;
   justify-content: center;
   padding: 1rem;
+  min-width: 100%;
+}
+
+.skill-group div {
+  flex: 0 0 calc(25% - 1.5rem);
+  text-align: center;
+}
+
+.skill-group div img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.skills .slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  overflow: hidden;
 }
 
 .slider-btn {
@@ -488,31 +509,107 @@ header .social-media svg {
   overflow: hidden;
 }
 
+/* Skills Swiper Styles */
+.skills {
+    margin: 2rem auto;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.skills-swiper {
+    padding: 20px;
+}
+
+.skills-swiper .swiper-slide {
+    width: auto;
+    height: auto;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+}
+
+.skills-swiper .swiper-slide-active,
+.skills-swiper .swiper-slide-next,
+.skills-swiper .swiper-slide-prev {
+    opacity: 1;
+}
+
+.skills-swiper .swiper-slide div {
+    text-align: center;
+    padding: 10px;
+}
+
+.skills-swiper .skill-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.skills-swiper .swiper-slide:hover .skill-icon {
+    transform: scale(1.1);
+}
+
+.skills-swiper .swiper-button-next,
+.skills-swiper .swiper-button-prev {
+    color: rgba(0, 119, 181);
+    background: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.skills-swiper .swiper-button-next:after,
+.skills-swiper .swiper-button-prev:after {
+    font-size: 20px;
+}
+
+.skills-swiper .swiper-pagination-bullet-active {
+    background: rgba(0, 119, 181);
+}
+
 /* Academic Section Styles */
 .academic {
+  max-width: 80%;
+  margin: 6rem auto;
   padding: 2rem;
-  background: #f5f5f5;
+  background: none;
 }
 
-.academic-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+.academic > p {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
-.academic-tab {
-  padding: 0.5rem 1rem;
-  border: none;
-  background: #fff;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+.academic-swiper {
+  padding: 20px;
 }
 
-.academic-tab.active {
+.academic-swiper .swiper-slide {
+  height: auto;
+  padding: 20px;
+}
+
+.academic-swiper .timeline-content {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.academic-swiper .timeline-content:hover {
+  transform: translateY(-5px);
+}
+
+.academic-swiper .swiper-button-next,
+.academic-swiper .swiper-button-prev {
+  color: rgba(0, 119, 181);
+}
+
+.academic-swiper .swiper-pagination-bullet-active {
   background: rgba(0, 119, 181);
-  color: white;
 }
 
 /* Dropdown icon styles */
@@ -864,6 +961,29 @@ header .social-media svg {
   .skill-group {
     scroll-snap-align: start;
   }
+
+  .skill-group div {
+    flex: 0 0 calc(50% - 1rem);
+  }
+
+  .academic {
+    max-width: 95%;
+    padding: 1rem;
+  }
+
+  .academic > p {
+    font-size: 3rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .projects .projects-showcase img {
+    height: 200px;
+  }
+
+  .projects-showcase .project {
+    gap: 1rem;
+  }
 }
 
 /* Timeline Styles */
@@ -921,4 +1041,266 @@ header .social-media svg {
 
 .timeline-item.right:before {
   left: -10px;
+}
+
+@media screen and (max-width: 768px) {
+  .academic {
+    max-width: 95%;
+  }
+
+  .academic > p {
+    font-size: 3rem;
+    margin-left: 3rem;
+  }
+}
+
+/* Update project image container */
+.project-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.project .project-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Project Swiper Styles */
+.project-swiper {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-swiper .swiper-slide {
+    width: 100%;
+    height: 300px;
+}
+
+.project-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-swiper .swiper-button-next,
+.project-swiper .swiper-button-prev {
+    color: rgba(0, 119, 181);
+    background: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.project-swiper .swiper-button-next:after,
+.project-swiper .swiper-button-prev:after {
+    font-size: 20px;
+}
+
+.project-swiper .swiper-pagination-bullet-active {
+    background: rgba(0, 119, 181);
+}
+
+/* Academic Swiper Styles */
+.academic-swiper {
+    padding: 20px;
+    overflow: visible;
+}
+
+.academic-swiper .swiper-slide {
+    height: auto;
+    opacity: 0.4;
+    transition: opacity 0.3s;
+}
+
+.academic-swiper .swiper-slide-active,
+.academic-swiper .swiper-slide-next,
+.academic-swiper .swiper-slide-prev {
+    opacity: 1;
+}
+
+.academic-swiper .timeline-content {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.academic-swiper .timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+.academic-swiper .swiper-button-next,
+.academic-swiper .swiper-button-prev {
+    color: rgba(0, 119, 181);
+    background: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.academic-swiper .swiper-button-next:after,
+.academic-swiper .swiper-button-prev:after {
+    font-size: 20px;
+}
+
+.academic-swiper .swiper-pagination-bullet-active {
+    background: rgba(0, 119, 181);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .project-swiper .swiper-slide {
+        height: 200px;
+    }
+
+    .academic-swiper {
+        padding: 10px;
+    }
+
+    .academic-swiper .timeline-content {
+        padding: 15px;
+    }
+
+    .project-swiper .swiper-button-next,
+    .project-swiper .swiper-button-prev,
+    .academic-swiper .swiper-button-next,
+    .academic-swiper .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+    }
+
+    .project-swiper .swiper-button-next:after,
+    .project-swiper .swiper-button-prev:after,
+    .academic-swiper .swiper-button-next:after,
+    .academic-swiper .swiper-button-prev:after {
+        font-size: 16px;
+    }
+}
+
+/* Project Layout Updates */
+.projects-showcase .project {
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.project .project-details,
+.project .project-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+    .projects-showcase .project {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .project .project-details,
+    .project .project-image {
+        width: 100%;
+    }
+}
+
+/* Academic Section Styles */
+.academic-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.academic-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.academic-card .timeline-content {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.academic-card .timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+.academic-card h3 {
+    color: #5a5a5a;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.academic-card h4 {
+    color: #5b7e91;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.academic-card p {
+    color: #818081;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .skills {
+        padding: 10px;
+    }
+
+    .skills-swiper {
+        padding: 10px;
+    }
+
+    .skills-swiper .swiper-button-next,
+    .skills-swiper .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+    }
+
+    .skills-swiper .swiper-button-next:after,
+    .skills-swiper .swiper-button-prev:after {
+        font-size: 16px;
+    }
+
+    .academic-container {
+        padding: 10px;
+        gap: 1rem;
+    }
+
+    .academic-card {
+        min-width: 100%;
+    }
+
+    .academic-card .timeline-content {
+        padding: 15px;
+    }
+}
+
+/* Details Button Style */
+.details-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: rgba(0, 119, 181);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.details-btn:hover {
+    background: #0e2a47;
+    transform: translateY(-2px);
 }
