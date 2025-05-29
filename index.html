@@ -22,14 +22,7 @@
       <img src="images/favicon.png" alt="" width="65px" height="65px" class="logo">
       <ul>
         <li><a href="#about">About Me</a></li>
-        <li class="dropdown">
-          <a href="#academic" onclick="toggleDropdown(event)">Academic <i class="fas fa-chevron-down"></i></a>
-          <div class="dropdown-content">
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#extracurricular">Extra Curricular</a>
-          </div>
-        </li>
+        <li class="dropdown"><a href="#academic">Academic</a></li>
         <li><a href="#experience">Professional Experience</a></li>
         <li><a href="#project">Projects</a></li>
         <li><a href="#contact">Contact Me</a></li>
@@ -132,43 +125,51 @@
             </div>
             <div class="swiper-slide">
               <div>
-                <img class="skill-icon" width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="arduino">
+                <img class="skill-icon" width="80" height="80"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="arduino">
                 <p>Arduino IDE</p>
               </div>
             </div>
             <div class="swiper-slide">
               <div>
-                <img class="skill-icon" width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="Vs code">
+                <img class="skill-icon" width="80" height="80"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="Vs code">
                 <p>VS code</p>
               </div>
             </div>
             <div class="swiper-slide">
               <div>
-                <img class="skill-icon" width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                <img class="skill-icon" width="80" height="80"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
                 <p>Python</p>
               </div>
             </div>
             <div class="swiper-slide">
               <div>
-                <img class="skill-icon" width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                <img class="skill-icon" width="80" height="80"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
                 <p>C++</p>
               </div>
             </div>
             <div class="swiper-slide">
               <div>
-                <img class="skill-icon" width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                <img class="skill-icon" width="80" height="80"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
                 <p>HTML</p>
               </div>
             </div>
             <div class="swiper-slide">
               <div>
-                <img class="skill-icon" width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                <img class="skill-icon" width="80" height="80"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
                 <p>CSS</p>
               </div>
             </div>
             <div class="swiper-slide">
               <div>
-                <img class="skill-icon" width="80" height="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                <img class="skill-icon" width="80" height="80"
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JavaScript">
                 <p>JavaScript</p>
               </div>
             </div>
@@ -205,7 +206,7 @@
       <div class="academic-card">
         <div class="timeline-content">
           <h3>Secondary School Certificate (SSC)</h3>
-          <h4>Meherpur Govt High School, Meherpur</h4>
+          <h4>Meherpur Govt High School</h4>
           <p>January 2014 - February 2016</p>
           <p>Science Group with excellent academic performance</p>
           <p>GPA 5.00 (Out of 5)</p>
@@ -263,14 +264,14 @@
     <div class="projects-showcase">
       <!-- Project 1 -->
       <div class="project one">
-        <div class="project-details"> 
+        <div class="project-details">
           <h1>Solar MPPT Controller 1.5A</h1>
           <div class="project-content">
             <p>Design and Development of a 1.5A MPPT Solar Charge Controller!
               Built around the LT3652, this compact system is optimized for 15W solar panels and 12V SLA batteries,
               offering efficient 3-stage charging with enhanced thermal and electrical protection. <br>
-              Designed for harsh environments with: <br> 
-              ✅ Reverse polarity and surge protection <br> 
+              Designed for harsh environments with: <br>
+              ✅ Reverse polarity and surge protection <br>
               ✅ DIN-rail mountable compact PCBA (75×55 mm)
             </p>
           </div>
@@ -294,53 +295,74 @@
         </div>
       </div>
       <!-- Project 2 -->
-      <div class="project two">
+      <div class="project one">
         <div class="project-image">
-          <img src="images/sensors.jpeg" alt="">
+          <div class="swiper project-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/SMT32 board (2).png" alt="SMT32 board">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/SMT32 board (1).png" alt="SMT32 board">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </div>
         <div class="project-details">
-          <h1>Multiple Sensors Data Read One Channel</h1>
+          <h1>STM32-based system featuring a sensor interface</h1>
           <div class="project-content">
-            <p>The DS18B20 temperature sensor communicates using one-wire protocol and each sensor has a unique 64-bit
-              serial code, so it can be easily read the temperature from multiple sensors using just one single Arduino
-              digital Pin.</p>
+            <p>Designed a custom PCB for an STM32-based system featuring a sensor interface. The design incorporates key
+              elements like RS485 communication, LED indicators (RX and TX), and a power conversion system for efficient
+              operation. <br>
+              Key Features: <br>
+              ✅ RS485 Communication Interfac <br>
+              ✅ Power Conversion (24V to 3.3V) (TPS62177DQCR)
+            </p>
           </div>
-          <a href="https://github.com/omarfarukbadhon/Multiple_sensors_data_read_one_channel" target="_blank"
+          <a href="https://github.com/omarfarukbadhon/Solar-MPPT-Controller.git" target="_blank"
             rel="noopener noreferrer"><button>GitHub</button></a>
         </div>
       </div>
       <!-- Project 3 -->
-      <div class="project three">
+      <div class="project one">
         <div class="project-details">
-          <h1>Data Logger</h1>
+          <h1>2-cell Li-ion Battery Management System</h1>
           <div class="project-content">
-            <p>Its a multiple sensors data logger that can read data of temperature, pressure and flow of a system. Also
-              user friendly dashboard is developed for these parameters with python and Qt designer. Here, Arduino nano
-              is used as a micro-controller. </p>
+            <p>A custom-designed 2-cell Li-ion Battery Management System (BMS), developed with Altium. <br>
+              Key features include: <br>
+              ✅ Surge protection for increased durability <br>
+              ✅ Reverse polarity protection using MOSFET <br>
+              ✅ LCL filter for precise DC signal conditioning
+            </p>
           </div>
-          <a href="https://github.com/omarfarukbadhon/Data-Logger" target="_blank"
+          <a href="https://github.com/omarfarukbadhon/Solar-MPPT-Controller.git" target="_blank"
             rel="noopener noreferrer"><button>GitHub</button></a>
         </div>
         <div class="project-image">
-          <img src="images/data.png" alt="">
-        </div>
-      </div>
-      <!-- Project 4 -->
-      <div class="project four">
-        <div class="project-image">
-          <img src="images/js.jpg" alt="">
-        </div>
-        <div class="project-details">
-          <h1>JavaScript Projects</h1>
-          <div class="project-content">
-            <p>Here some basic or intermediate javascript project I have tried to add. Some of them are a BMI calculator
-              that calculate your BMI(Body Mass Index) value, a Unit converter like Centi-meter to meter, a
-              multiplication table etc.</p>
+          <div class="swiper project-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/BMS 3.png" alt="BMSr">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/BMS 1.png" alt="BMS">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/BMS 2.png" alt="BMS">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
-          <a href="https://github.com/omarfarukbadhon/javascript-project" target="_blank"
-            rel="noopener noreferrer"><button>GitHub</button></a>
         </div>
       </div>
+    </div>
+    <div class="more-projects">
+      <a href="projects.html" class="more-projects-btn"><i class="fas fa-folder-open"></i> View More Projects</a>
     </div>
   </section>
 
@@ -427,7 +449,7 @@
     }
 
     // Mobile menu toggle
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
       document.querySelector('nav').classList.toggle('active');
     });
 
@@ -447,7 +469,7 @@
     function moveSlide(sliderId, direction) {
       const slider = sliders[sliderId];
       slider.current = (slider.current + direction + slider.total) % slider.total;
-      
+
       if (sliderId === 'project1') {
         const container = document.querySelector('.project.one .slider-container');
         const items = container.querySelectorAll('img');
@@ -461,7 +483,7 @@
     }
 
     // Close dropdowns when clicking outside
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
       if (!event.target.closest('.dropdown')) {
         document.querySelectorAll('.dropdown').forEach(dropdown => {
           dropdown.classList.remove('active');

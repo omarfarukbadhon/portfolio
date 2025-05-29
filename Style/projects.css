@@ -1,0 +1,244 @@
+/* Projects Page Styles */
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.projects-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(to right, #0e2a47, #13385e);
+    color: white;
+    border-radius: 10px;
+}
+
+.projects-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.projects-header p {
+    font-size: 1.2rem;
+    color: #e9e9e9;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 4rem 0;
+}
+
+/* Project Card Styles */
+.project {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-details,
+.project-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.project-details h1 {
+    font-size: 1.8rem;
+    color: #0e2a47;
+    margin-bottom: 1rem;
+}
+
+.project-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Project Image and Swiper Styles */
+.project-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-swiper {
+    width: 100%;
+    height: 300px;
+}
+
+.project-swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-swiper .swiper-button-next,
+.project-swiper .swiper-button-prev {
+    color: rgba(0, 119, 181);
+    background: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.project-swiper .swiper-button-next:after,
+.project-swiper .swiper-button-prev:after {
+    font-size: 20px;
+}
+
+.project-swiper .swiper-pagination-bullet-active {
+    background: rgba(0, 119, 181);
+}
+
+/* Button Styles */
+.project-details button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    background: rgba(0, 119, 181);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-details button:hover {
+    background: #0e2a47;
+    transform: translateY(-2px);
+}
+
+/* Back to Home Button */
+.back-to-home {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: rgba(0, 119, 181);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #0e2a47;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .projects-container {
+        padding: 1.5rem;
+    }
+
+    .project {
+        padding: 1.5rem;
+    }
+
+    .project-details h1 {
+        font-size: 1.6rem;
+    }
+
+    .project-content p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects-container {
+        padding: 1rem;
+    }
+
+    .projects-header h1 {
+        font-size: 2rem;
+    }
+
+    .project {
+        flex-direction: column !important;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .project-details,
+    .project-image {
+        width: 100%;
+    }
+
+    .project-swiper {
+        height: 250px;
+    }
+
+    .project-details h1 {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .projects-header p {
+        font-size: 1rem;
+    }
+
+    .project-swiper {
+        height: 200px;
+    }
+
+    .project-details button {
+        width: 100%;
+    }
+
+    .back-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* More Projects Button Style */
+.more-projects {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.more-projects-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgba(0, 119, 181);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.more-projects-btn:hover {
+    background: #0e2a47;
+    transform: translateY(-2px);
+} 
