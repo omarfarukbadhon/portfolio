@@ -736,11 +736,17 @@ header .social-media svg {
     display: block;
     order: 2;
     margin-left: auto;
+    z-index: 1000;
   }
 
   .menu-toggle i {
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .menu-toggle.active i::before {
+    content: "\f00d";
   }
 
   header nav .logo {
@@ -751,23 +757,30 @@ header .social-media svg {
 
   nav ul {
     display: none;
-    position: absolute;
-    top: 80px;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
-    background-color: #0e2a47;
+    height: 100vh;
+    background-color: rgba(14, 42, 71, 0.95);
     flex-direction: column;
     align-items: center;
-    padding: 1rem 0;
-    z-index: 100;
+    justify-content: center;
+    padding: 2rem 0;
+    z-index: 999;
+  }
+
+  nav ul li {
+    margin: 1rem 0;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
+    color: white;
   }
 
   nav.active ul {
     display: flex;
-  }
-
-  nav button {
-    display: none;
   }
 
   .header-content {
@@ -782,8 +795,8 @@ header .social-media svg {
   }
 
   .header-content .right-content img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
 
   .header-content .left-content {
@@ -791,11 +804,12 @@ header .social-media svg {
   }
 
   .header-content .left-content h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    white-space: nowrap;
   }
 
   .header-content .left-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .header-content .left-content .scroll {
@@ -914,8 +928,13 @@ header .social-media svg {
   }
 
   .skills-swiper .skill-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .skills-swiper .swiper-slide div p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
   }
 
   /* Projects section mobile styles */
@@ -968,13 +987,20 @@ header .social-media svg {
 
   .contact-me .mail {
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
   }
 
   .contact-me .mail > p {
     font-size: 1.2rem;
+    margin-right: 0;
+    text-align: center;
   }
 
   .contact-me .mail button {
+    width: 100%;
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
   }
