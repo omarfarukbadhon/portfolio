@@ -16,9 +16,6 @@
   <!-- header Section -->
   <header>
     <nav>
-      <div class="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </div>
       <img src="images/favicon.png" alt="" width="65px" height="65px" class="logo">
       <ul>
         <li><a href="#about">About Me</a></li>
@@ -27,9 +24,8 @@
         <li><a href="#project">Projects</a></li>
         <li><a href="#contact">Contact Me</a></li>
       </ul>
-      <div class="CV">
-        <a href="https://drive.google.com/file/d/1mM0HYBHaZZJrmt3X4wtI9RyJCEZMZcBX/view?usp=sharing" target="_blank"
-          rel="noopener noreferrer"><button>CV</button></a>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
       </div>
     </nav>
     <div class="header-content">
@@ -449,8 +445,26 @@
     }
 
     // Mobile menu toggle
-    document.querySelector('.menu-toggle').addEventListener('click', function () {
-      document.querySelector('nav').classList.toggle('active');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    // Close menu when clicking a link
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+        nav.classList.remove('active');
+      }
     });
 
     // Dropdown toggle

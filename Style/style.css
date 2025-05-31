@@ -724,63 +724,78 @@ header .social-media svg {
 /* Responsive for mobile view */
 
 @media screen and (max-width: 450px) {
-
-  /* header */
-
   header nav {
-    justify-content: left;
-    margin-left: 1.5rem;
-    gap: 2rem;
-    flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    order: 2;
+    margin-left: auto;
+  }
+
+  .menu-toggle i {
+    color: white;
+    font-size: 1.8rem;
   }
 
   header nav .logo {
+    order: 1;
+    width: 50px;
+    height: 50px;
+  }
+
+  nav ul {
     display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #0e2a47;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    z-index: 100;
+  }
+
+  nav.active ul {
+    display: flex;
   }
 
   nav button {
-    margin-top: -2rem;
-    margin-left: 18rem;
-    border-radius: 4rem;
-  }
-
-  nav .resume {
     display: none;
   }
 
-  nav .CV {
-    display: block;
-  }
-
   .header-content {
+    width: 90%;
     flex-direction: column-reverse;
-    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
   }
 
   .header-content .right-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 2rem;
   }
 
   .header-content .right-content img {
-    width: 80%;
-    margin: -4rem auto 0;
+    width: 200px;
+    height: 200px;
   }
 
   .header-content .left-content {
-    margin-top: 0.5rem;
-    margin-left: 4rem;
+    margin-top: 0;
   }
 
   .header-content .left-content h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
   }
 
   .header-content .left-content h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .header-content .left-content .scroll {
@@ -789,117 +804,201 @@ header .social-media svg {
   }
 
   .header-content .left-content .scroll p {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   header .social-media {
-    top: 40%;
-    left: 0.5%;
+    display: none;
   }
 
-  /* Projects section style */
-
-  .projects {
-    max-width: 95%;
+  /* Experience section mobile styles */
+  .experience {
+    max-width: 90%;
     margin: 3rem auto;
   }
 
-  .projects>p {
-    font-size: 3rem;
-    margin-left: 3rem;
+  .experience > p {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
   }
 
-  .projects .projects-showcase {
-    margin: 2rem auto 4rem;
+  .experience-tabs {
+    gap: 1rem;
   }
 
-  .projects .projects-showcase img {
-    width: 300px;
-    height: 150px;
-  }
-
-  .projects-showcase .project {
-    flex-direction: column-reverse;
-    margin-bottom: 3rem;
-    align-items: end;
-    margin-left: 3rem;
-  }
-
-  .projects-showcase .two {
-    flex-direction: column;
-    align-items: start;
-  }
-
-  .projects-showcase .four {
-    flex-direction: column;
-    align-items: start;
-  }
-
-  .projects-showcase .project .project-details h1 {
-    margin-bottom: 0.8rem;
-  }
-
-  .projects-showcase .project p {
+  .experience-tab {
+    padding: 0.6rem 1.5rem;
     font-size: 1.2rem;
-    text-align: justify;
-    line-height: 1.8rem;
-    margin-bottom: 0.5rem;
   }
 
-  .projects-showcase .project .project-details button {
-    padding: 1rem 1.5rem;
+  #work-experience,
+  #startup-experience {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .timeline-item {
+    width: 100%;
+    margin: 0;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    margin: 0;
+  }
+
+  .timeline-item::after,
+  .timeline::after {
+    display: none;
+  }
+
+  .timeline-content {
+    background-color: #13385e;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .timeline-content h3 {
     font-size: 1.3rem;
-    border-radius: 1.5rem;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s;
   }
 
-  .projects-showcase .project .project-details button:hover {
-    background-color: rgba(0, 119, 181);
-    color: white;
+  .timeline-content h4 {
+    font-size: 1.1rem;
   }
 
-  /* About Me section style */
+  .timeline-content p {
+    font-size: 1rem;
+  }
 
+  /* About section mobile styles */
   .about {
-    max-width: 95%;
+    max-width: 90%;
+    margin: 3rem auto;
   }
 
-  .about>p {
-    font-size: 3rem;
-    margin-left: 3rem;
+  .about > p {
+    font-size: 2.5rem;
+    text-align: center;
   }
 
   .about .about-content {
-    padding: 1.5rem 1rem;
-    margin-left: 3rem;
-  }
-
-  .about .about-content .skills {
-    max-width: 100%;
-  }
-
-  /* Contact us section style */
-
-  .contact-me {
-    max-width: 95%;
-    margin: 6rem auto 0;
-  }
-
-  .contact-me>p {
-    font-size: 3rem;
-    margin-left: 3rem;
-  }
-
-  .contact-me .mail {
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
   }
 
-  .contact-me .mail>p {
-    font-size: 1.8rem;
-    margin-right: 0rem;
+  .about .about-content > div img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about .about-content .myself {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .about .about-content .skills {
+    width: 100%;
+  }
+
+  /* Skills section mobile styles */
+  .skills-swiper {
+    padding: 1rem 0;
+  }
+
+  .skills-swiper .swiper-slide {
+    width: 120px;
+  }
+
+  .skills-swiper .skill-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Projects section mobile styles */
+  .projects {
+    max-width: 90%;
+    margin: 3rem auto;
+  }
+
+  .projects > p {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .projects .projects-showcase {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .projects-showcase .project {
+    height: auto;
+  }
+
+  .projects-showcase .project img {
+    height: 200px;
+  }
+
+  .projects-showcase .project .project-details h1 {
+    font-size: 1.5rem;
+  }
+
+  .projects-showcase .project p {
+    font-size: 1rem;
+  }
+
+  .projects-showcase .project .project-details button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Contact section mobile styles */
+  .contact-me {
+    max-width: 90%;
+    margin: 3rem auto;
+  }
+
+  .contact-me > p {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .contact-me .mail {
+    padding: 2rem;
+  }
+
+  .contact-me .mail > p {
+    font-size: 1.2rem;
+  }
+
+  .contact-me .mail button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 451px) and (max-width: 768px) {
+  header nav {
+    width: 90%;
+  }
+
+  .header-content {
+    width: 90%;
+  }
+
+  .experience,
+  .about,
+  .projects,
+  .contact-me {
+    max-width: 90%;
+  }
+
+  .projects .projects-showcase {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
