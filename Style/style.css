@@ -724,285 +724,195 @@ header .social-media svg {
 /* Responsive for mobile view */
 
 @media screen and (max-width: 450px) {
+  /* Header section refinements */
   header nav {
-    width: 90%;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-  }
-
-  .menu-toggle {
-    display: block;
-    order: 2;
-    margin-left: auto;
-    z-index: 1000;
-  }
-
-  .menu-toggle i {
-    color: white;
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-  }
-
-  .menu-toggle.active i::before {
-    content: "\f00d";
-  }
-
-  header nav .logo {
-    order: 1;
-    width: 50px;
-    height: 50px;
-  }
-
-  nav ul {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(14, 42, 71, 0.95);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 0;
-    z-index: 999;
-  }
-
-  nav ul li {
-    margin: 1rem 0;
-  }
-
-  nav ul li a {
-    font-size: 1.2rem;
-    color: white;
-  }
-
-  nav.active ul {
-    display: flex;
+    width: 95%;
+    padding: 0.5rem 0;
   }
 
   .header-content {
-    width: 90%;
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 2rem 0;
-  }
-
-  .header-content .right-content {
-    margin-bottom: 2rem;
-  }
-
-  .header-content .right-content img {
-    width: 250px;
-    height: 250px;
+    width: 95%;
+    padding: 1rem 0;
+    margin-top: -2rem;
   }
 
   .header-content .left-content {
-    margin-top: 0;
+    margin-top: 1rem;
   }
 
   .header-content .left-content h1 {
-    font-size: 2rem;
-    white-space: nowrap;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
   }
 
   .header-content .left-content h2 {
-    font-size: 1.3rem;
-  }
-
-  .header-content .left-content .scroll {
-    justify-content: center;
-    margin-top: 2rem;
-  }
-
-  .header-content .left-content .scroll p {
-    font-size: 1.5rem;
-  }
-
-  header .social-media {
-    display: none;
-  }
-
-  /* Experience section mobile styles */
-  .experience {
-    max-width: 90%;
-    margin: 3rem auto;
-  }
-
-  .experience > p {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-
-  .experience-tabs {
-    gap: 1rem;
-  }
-
-  .experience-tab {
-    padding: 0.6rem 1.5rem;
     font-size: 1.2rem;
+    line-height: 1.4;
   }
 
-  #work-experience,
-  #startup-experience {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  .header-content .right-content {
+    width: 80%;
+    margin: 0 auto;
   }
 
-  .timeline-item {
+  .header-content .right-content img {
     width: 100%;
-    margin: 0;
+    height: auto;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
   }
 
-  .timeline-item.left,
-  .timeline-item.right {
-    margin: 0;
-  }
-
-  .timeline-item::after,
-  .timeline::after {
-    display: none;
-  }
-
-  .timeline-content {
-    background-color: #13385e;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .timeline-content h3 {
-    font-size: 1.3rem;
-  }
-
-  .timeline-content h4 {
-    font-size: 1.1rem;
-  }
-
-  .timeline-content p {
-    font-size: 1rem;
-  }
-
-  /* About section mobile styles */
+  /* About Section */
   .about {
-    max-width: 90%;
+    max-width: 95%;
     margin: 3rem auto;
   }
 
   .about > p {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0e2a47;
   }
 
   .about .about-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .about .about-content > div {
+    margin: 1rem auto;
   }
 
   .about .about-content > div img {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin: 0 auto;
   }
 
   .about .about-content .myself {
-    font-size: 1rem;
-    text-align: justify;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
   }
 
-  .about .about-content .skills {
-    width: 100%;
-  }
-
-  /* Skills section mobile styles */
-  .skills-swiper {
-    padding: 1rem 0;
-  }
-
-  .skills-swiper .swiper-slide {
-    width: 120px;
-  }
-
-  .skills-swiper .skill-icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  .skills-swiper .swiper-slide div p {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-  }
-
-  /* Projects section mobile styles */
+  /* Projects Section */
   .projects {
-    max-width: 90%;
+    max-width: 95%;
     margin: 3rem auto;
   }
 
   .projects > p {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-align: center;
+    margin-bottom: 2rem;
+    color: #0e2a47;
   }
 
   .projects .projects-showcase {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    margin: 2rem auto;
   }
 
   .projects-showcase .project {
-    height: auto;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
   }
 
-  .projects-showcase .project img {
+  .project .project-details {
+    order: 1;
+  }
+
+  .project .project-image {
+    order: 2;
+    width: 100%;
+  }
+
+  .project-swiper .swiper-slide {
     height: 200px;
   }
 
   .projects-showcase .project .project-details h1 {
     font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
   }
 
   .projects-showcase .project p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
   }
 
   .projects-showcase .project .project-details button {
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1.2rem;
     font-size: 1rem;
-  }
-
-  /* Contact section mobile styles */
-  .contact-me {
-    max-width: 90%;
-    margin: 3rem auto;
-  }
-
-  .contact-me > p {
-    font-size: 2.5rem;
-    text-align: center;
-  }
-
-  .contact-me .mail {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .contact-me .mail > p {
-    font-size: 1.2rem;
-    margin-right: 0;
-    text-align: center;
-  }
-
-  .contact-me .mail button {
     width: 100%;
-    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+  }
+
+  /* More Projects Button */
+  .more-projects {
+    margin: 2rem auto;
+  }
+
+  .more-projects-btn {
+    width: 100%;
+    padding: 0.8rem 1rem;
     font-size: 1rem;
+    justify-content: center;
+  }
+
+  /* Navigation Menu */
+  nav ul {
+    background-color: #0e2a47;
+    padding: 2rem 1rem;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul a {
+    font-size: 1.2rem;
+    padding: 0.8rem 0;
+    display: block;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    padding: 0.5rem;
+  }
+
+  .menu-toggle i {
+    font-size: 1.8rem;
+  }
+
+  /* Dropdown Refinements */
+  .dropdown-content {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    margin-top: 0;
+    min-width: 100%;
+  }
+
+  .dropdown-content a {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.6rem 0;
+    font-size: 1rem !important;
+  }
+
+  .dropdown-content a:hover {
+    background: transparent;
+    color: white;
+  }
+
+  /* Bottom SVG */
+  svg {
+    margin-bottom: -5px;
   }
 }
 

@@ -400,11 +400,11 @@
       },
     });
 
-    // Initialize Skills Swiper with updated settings
+    // Initialize Skills Swiper
     const skillsSwiper = new Swiper('.skills-swiper', {
       loop: true,
       grabCursor: true,
-      spaceBetween: 20,
+      spaceBetween: 15,
       centeredSlides: true,
       slidesPerView: 'auto',
       pagination: {
@@ -419,15 +419,18 @@
       breakpoints: {
         320: {
           slidesPerView: 2,
-          spaceBetween: 15
+          spaceBetween: 10,
+          centeredSlides: false
         },
         640: {
           slidesPerView: 3,
-          spaceBetween: 20
+          spaceBetween: 15,
+          centeredSlides: true
         },
         1024: {
           slidesPerView: 4,
-          spaceBetween: 30
+          spaceBetween: 20,
+          centeredSlides: true
         }
       }
     });
