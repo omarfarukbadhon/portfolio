@@ -1187,17 +1187,6 @@ header .social-media svg {
   left: -10px;
 }
 
-@media screen and (max-width: 768px) {
-  .academic {
-    max-width: 95%;
-  }
-
-  .academic > p {
-    font-size: 3rem;
-    margin-left: 3rem;
-  }
-}
-
 /* Update project image container */
 .project-image {
   flex: 1;
