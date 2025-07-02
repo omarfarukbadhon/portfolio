@@ -4,6 +4,8 @@
     margin: 0 auto;
     padding: 2rem;
     background: #fff;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Header Styles */
@@ -498,5 +500,22 @@ section h2 {
     .back-btn {
         padding: 0.6rem 1.2rem;
         font-size: 0.9rem;
+    }
+}
+
+/* Mobile Navigation Spacing for all pages */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 0;
+        margin-top: 0;
+    }
+    
+    .varsity-container {
+        margin-top: 0;
+        padding-top: 1rem;
+    }
+
+    .varsity-header {
+        margin-top: 1rem;
     }
 } 

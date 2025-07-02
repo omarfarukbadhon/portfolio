@@ -3,6 +3,8 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Header Styles */
@@ -199,6 +201,15 @@
 }
 
 @media screen and (max-width: 480px) {
+    .projects-container {
+        padding: 0.5rem;
+    }
+
+    .projects-header {
+        padding: 1.5rem 1rem;
+        margin-bottom: 2rem;
+    }
+
     .projects-header h1 {
         font-size: 1.8rem;
     }
@@ -207,12 +218,26 @@
         font-size: 1rem;
     }
 
+    .project {
+        padding: 1rem;
+    }
+
     .project-swiper {
         height: 200px;
     }
 
+    .project-details h1 {
+        font-size: 1.2rem !important;
+    }
+
+    .project-content p {
+        font-size: 0.9rem;
+    }
+
     .project-details button {
         width: 100%;
+        font-size: 0.9rem;
+        padding: 0.7rem 1rem;
     }
 
     .back-btn {
@@ -241,4 +266,21 @@
 .more-projects-btn:hover {
     background: #0e2a47;
     transform: translateY(-2px);
+}
+
+/* Mobile Navigation Spacing */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 0;
+        margin-top: 0;
+    }
+    
+    .projects-container {
+        margin-top: 0;
+        padding-top: 1rem;
+    }
+
+    .projects-header {
+        margin-top: 1rem;
+    }
 } 

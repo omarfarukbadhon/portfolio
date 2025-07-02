@@ -11,6 +11,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <img src="images/favicon.png" alt="" width="65px" height="65px" class="logo">
+            <ul>
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="index.html#academic">Academic</a></li>
+                <li><a href="index.html#experience">Professional Experience</a></li>
+                <li><a href="index.html#project">Projects</a></li>
+                <li><a href="index.html#contact">Contact Me</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
     <div class="projects-container">
         <header class="projects-header">
             <h1>All Projects</h1>
@@ -218,6 +235,35 @@
                     prevEl: '.swiper-button-prev',
                 },
             });
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : 'auto';
+        });
+
+        // Close menu when clicking a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+                nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
         });
     </script>
 </body>

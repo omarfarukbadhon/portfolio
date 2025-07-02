@@ -447,9 +447,18 @@
       });
       event.target.classList.add('active');
 
+      // Get screen width to handle responsive display
+      const isMobile = window.innerWidth <= 768;
+      const displayValue = isMobile ? 'flex' : 'block';
+
       // Show selected experience type
-      document.getElementById('work-experience').style.display = type === 'work' ? 'block' : 'none';
-      document.getElementById('startup-experience').style.display = type === 'startup' ? 'block' : 'none';
+      if (type === 'work') {
+        document.getElementById('work-experience').style.display = displayValue;
+        document.getElementById('startup-experience').style.display = 'none';
+      } else {
+        document.getElementById('work-experience').style.display = 'none';
+        document.getElementById('startup-experience').style.display = displayValue;
+      }
     }
 
     // Mobile menu toggle
@@ -517,6 +526,37 @@
           dropdown.classList.remove('active');
         });
       }
+    });
+
+    // Handle window resize for responsive tab functionality
+    window.addEventListener('resize', function() {
+      const activeTab = document.querySelector('.experience-tab.active');
+      if (activeTab) {
+        const type = activeTab.textContent.toLowerCase();
+        const isMobile = window.innerWidth <= 768;
+        const displayValue = isMobile ? 'flex' : 'block';
+        
+        if (type === 'work') {
+          document.getElementById('work-experience').style.display = displayValue;
+          document.getElementById('startup-experience').style.display = 'none';
+        } else if (type === 'startup') {
+          document.getElementById('work-experience').style.display = 'none';
+          document.getElementById('startup-experience').style.display = displayValue;
+        }
+      }
+    });
+
+    // Initialize default experience tab state on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      const isMobile = window.innerWidth <= 768;
+      const displayValue = isMobile ? 'flex' : 'block';
+      
+      // Show work experience by default, hide startup
+      document.getElementById('work-experience').style.display = displayValue;
+      document.getElementById('startup-experience').style.display = 'none';
+      
+      // Ensure Work tab is active by default
+      document.querySelector('.experience-tab').classList.add('active');
     });
   </script>
 </body>
