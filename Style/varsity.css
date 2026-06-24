@@ -124,6 +124,15 @@ section h2 {
     transform: translateY(-5px);
 }
 
+.publication-card h5,
+.honour-card h5,
+.volunteer-card h5,
+.leadership-card h5 {
+    color: #0e2a47;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
 .publication-card h3,
 .honour-card h3,
 .volunteer-card h3,
